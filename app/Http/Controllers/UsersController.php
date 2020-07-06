@@ -28,6 +28,6 @@ class UsersController extends Controller
 
     public function getCurrentUser(){
         $user = User::find(Auth::user())->first();
-        return $user->toJson();
+        return response()->json($user);
     }
 }
