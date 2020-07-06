@@ -22,7 +22,7 @@ class UsersController extends Controller
     
 
     public function getUsers(){
-        $users = User::all()->except( (string) Auth::id());
+        $users = User::all();
         return response()->json($users);
     }
 
