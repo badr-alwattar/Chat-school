@@ -22,7 +22,8 @@ class UsersController extends Controller
     
 
     public function getUsers(){
-        $users = User::where('id', '>=', 1)->get();
+        // $users = User::where('id', '>=', 1)->get();
+        $users = DB::table('users')->get();
         return response()->json($users);
     }
 
