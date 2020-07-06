@@ -22,7 +22,7 @@ class UsersController extends Controller
     
 
     public function getUsers(){
-        $users = User::all();
+        $users = User::where('id', '>=', 1)->get();
         return response()->json($users);
     }
 
